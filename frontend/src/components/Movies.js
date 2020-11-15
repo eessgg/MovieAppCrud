@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom'
 import Pagination from './commons/pagination';
 import ListGroup from './commons/ListGroup';
 import { getMovies } from './../services/fakeMovieService';
@@ -70,14 +71,18 @@ class Movies extends Component {
                 <div key={movie._id} className="col-lg-3 col-md-4 col-sm-12">
                   <div className="card">
                     <div className="movie-card">
-                      <img className="card-img-top" src={movie.img} alt="Card" />
+                      <img
+                        className="card-img-top"
+                        src={movie.img}
+                        alt="Card"
+                      />
                     </div>
                     <div className="card-body">
-                      <h5 className="card-title">{movie.title}</h5>
+                      <h5 className="card-title">
+                        {movie.title} <i className="fas fa-star"></i>
+                      </h5>
                       <p className="card-text">{movie.genre.name}</p>
-                      <a href="/" className="btn btn-primary">
-                        Go somewhere
-                      </a>
+                      <Link to={`/movies/${movie._id}`}>Ver Detalhes</Link>
                     </div>
                   </div>
                 </div>

@@ -10,7 +10,7 @@ const ListGroup = (props) => {
    } = props;
 
   return (
-    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <div className="btn-group btn-group-toggle" data-toggle="buttons">
       {items.map((item) => (
         <label
           className={

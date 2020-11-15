@@ -28,9 +28,24 @@
   color: #61dafb;
 }
 
+.card {
+  border: none;
+  color: #E9E9E9;
+}
+
+.card-title {
+  color: #FFA600;
+  display: flex;
+  justify-content: space-between;
+}
+
 .movie-card {
   height: 300px;
   overflow: hidden;
+}
+
+.card-body {
+  background-color: #080D23;
 }
 
 

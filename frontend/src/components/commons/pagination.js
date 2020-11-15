@@ -11,16 +11,18 @@ const Pagination = (props) => {
   const pages = _.range(1, pagesCount + 1)
 
   return (
-    <div className="mt-5"> 
+    <div className="mt-5">
       <nav aria-label="Page navigation example">
-        <ul class="pagination">
+        <ul className="pagination">
           {pages.map((page) => (
             <li
               key={page}
-              class="page-item"
-              className={page === currentPage ? "page-item active" : "page-item"}
+              className="page-item"
+              className={
+                page === currentPage ? "page-item active" : "page-item"
+              }
             >
-              <a class="page-link" onClick={() => onPageChange(page)}>
+              <a className="page-link" onClick={() => onPageChange(page)}>
                 {page}
               </a>
             </li>

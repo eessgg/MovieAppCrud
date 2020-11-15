@@ -1,0 +1,19 @@
+import React from 'react';
+
+const Input = ({ name, label, error, ...rest }) => {
+  return (
+    <div className="form-row align-items-center text-light">
+      <label htmlFor="inputEmail"> {label} </label>
+      <input
+        {...rest}
+        name={name}
+        id={name}
+        className="form-control"
+        placeholder={label}
+      />
+      {error && <div className="alert alert-danger">{error}</div>}
+    </div>
+  );
+};
+
+export default Input;

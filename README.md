@@ -1,4 +1,4 @@
-# Movie App with React 
+# 'Filmoteca' - Movie App with React 
 
 ![App Image](background.png)
 
