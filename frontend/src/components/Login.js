@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Joi from 'joi-browser';
 import Form from './commons/Form';
 
@@ -34,11 +34,9 @@ class Login extends Form {
 
           <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
 
-          {this.renderInput("username", "Username", "email")}
-
+          {this.renderInput("username", "Username")}
           {this.renderInput("password", "Password", "password")}
-
-          {this.rederButton("Login")}
+          {this.renderButton("Login")}
         </form>
       </div>
     );

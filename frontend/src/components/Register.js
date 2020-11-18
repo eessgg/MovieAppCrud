@@ -1,28 +1,26 @@
-import React, { Component } from "react";
+import React from "react";
 import Joi from 'joi-browser';
 import Form from './commons/Form';
 
-class Login extends Form {
+class Register extends Form {
   state = {
-    data: { username: "", password: "" },
+    data: { username: "", password: "", name: "" },
     errors: {},
   };
 
   schema = {
-    username: Joi.string().required().label("Username"),
-    password: Joi.string().required().label("Password"),
+    username: Joi.string().required().email().label("Username"),
+    password: Joi.string().required().min(5).label("Password"),
+    name: Joi.string().required().label("Name"),
   };
 
   doSubmit = () => {
-    console.log('submitted')
-  }
+    console.log("submitted");
+  };  
 
   render() {
     return (
       <div className="container text-center">
-        <div className="m-2 text-light bg-transparent">
-          <h1>Login</h1>
-        </div>
         <form onSubmit={this.handleSubmit} className="form-signin">
           <img
             className="mb-4"
@@ -32,19 +30,19 @@ class Login extends Form {
             height="72"
           />
 
-          <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
+          <h1 className="h1 text-light mb-3 font-weight-normal">Register</h1>
 
           {this.renderInput("username", "Username", "text")}
 
           {this.renderInput("password", "Password", "password")}
-          
-          {this.renderInput("password", "Name", "password")}
 
-          {this.rederButton("Register")}
+          {this.renderInput("name", "Name", "text")}
+
+          {this.renderButton("Register")}
         </form>
       </div>
     );
   }
 }
 
-export default Login;
+export default Register;

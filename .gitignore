@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/http-teste
 /.pnp
 .pnp.js
 
